@@ -1,0 +1,11 @@
+my-npm:
+  image: node:latest
+  container_name: my-npm
+  stdin_open: true
+  tty: true
+  command: npm start
+  volumes:
+    - .:/root/project
+  working_dir: /root/project
+  ports:
+    - 8080:8080
